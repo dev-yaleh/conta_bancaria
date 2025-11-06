@@ -1,9 +1,19 @@
 import readlinesync = require("readline-sync");
-import { colors } from './src/util/Colors';
+import {colors} from './src/util/Colors';
+import {Conta} from './src/model/Conta';
 
 export function main() {
 
     let opcao: number;
+
+
+    // OBJETO DA CLASSE CONTA (TESTE)
+    const conta: Conta = new Conta(1, 123, 1, `Adriana`, 10000);
+    conta.visualizar();
+    conta.sacar(10500);
+    conta.visualizar();
+    conta.depositar(5000);
+    conta.visualizar();
 
     while (true) {
 
@@ -100,7 +110,7 @@ export function main() {
 }
 
 /* Função com os dados da pessoa desenvolvedora */
-function sobre(): void {
+export function sobre(): void {
     console.log("\n*****************************************************");
     console.log("Projeto Desenvolvido por: ");
     console.log("Generation Brasil - generation@generation.org");
