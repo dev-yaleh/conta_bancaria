@@ -33,7 +33,7 @@ export class ContaCorrente extends Conta {
 
     public visualizar(): void {
         super.visualizar()
-        console.log("limite: " + this._limite.toFixed(2))
+        console.log("Limite: " + this._limite.toFixed(2))
     }
 
 }
